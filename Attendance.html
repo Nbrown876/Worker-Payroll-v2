@@ -11,26 +11,29 @@
         <h1>Attendance Record</h1>
         <div id="current-time" class="time-display"></div>
         <div class="attendance-form">
-            <input type="text" id="employee-id" placeholder="Enter Employee ID">
-            <button onclick="markAttendance()" class="mark-btn">Mark Attendance</button>
-            <button onclick="toggleAttendanceHistory()" class="history-btn">Show Attendance History</button>
-        </div>
-        <div class="table-container" id="attendance-history" style="display: none;">
+            <div class="attendance-form">
+                <input type="text" id="employee-id" placeholder="Enter Employee ID">
+                <button onclick="markAttendance('in')" class="mark-btn">Clock In</button>
+                <button onclick="markAttendance('out')" class="clock-out-btn">Clock Out</button>
+                <button onclick="toggleAttendanceHistory()" class="history-btn">Show Attendance History</button>
+            </div>
+            
+            <!-- Update the table headers -->
             <table id="attendance-table">
                 <thead>
                     <tr>
                         <th>Employee ID</th>
                         <th>Employee Name</th>
                         <th>Date</th>
-                        <th>Time</th>
+                        <th>Clock In</th>
+                        <th>Clock Out</th>
+                        <th>Hours Worked</th>
                         <th>Department</th>
                     </tr>
                 </thead>
                 <tbody>
                 </tbody>
             </table>
-        </div>
-    </div>
     <script src="Attendance.js"></script>
 </body>
 </html>
