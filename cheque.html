@@ -29,18 +29,20 @@
         <div class="content-container">
             <div class="sidebar">
                 <div class="sidebar-header">CHEQUE</div>
-                <div class="sidebar-item active">• CREATE CHEQUE</div>
-                <div class="sidebar-item">• VIEW ALL CHEQUES</div>
-
+                <div class="sidebar-item" id="create-cheque-btn">• CREATE CHEQUE</div>
+                <div class="sidebar-item" id="view-cheques-btn">• VIEW ALL CHEQUES</div>
             </div>
 
             <div class="main-content">
                 <div class="toolbar">
-                    <button onclick="window.location.href='dashboard.html'" class="tool-btn">
-                        <i class="fas fa-home"></i>
-
-                    </button>
-                </div>
+                    <div class="toolbar">
+                        <button onclick="window.location.href='dashboard.html'" class="tool-btn">
+                            <i class="fas fa-home"></i>
+                        </button>
+                        <button onclick="printCheque()" class="tool-btn" id="print-btn" style="display: none;">
+                            <i class="fas fa-print"></i>
+                        </button>
+                    </div>
 
                 <div class="cheque-form">
                     <div class="cheque-header">
